@@ -1,3 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkalami&display=swap');
+
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    place-items: center;
+    background-image: url("../../static/img/zero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    height: 100vh;
+    background-color: #080710;
+    background-color: #080710;
+}
+
+#wrapper {
+    justify-content: center;
+    margin: 2.35rem 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+#welcome {
+    margin: 0;
+    background-color: rgb(0, 0, 0);
+}
+
+#welcome>h1 {
+    text-align: center;
+    font-family: 'Passions Conflict', cursive;
+    font-size: 5rem;
+    letter-spacing: 0.1rem;
+    background: linear-gradient(180deg, rgba(165, 195, 250, 1) 17%, rgba(188, 205, 221, 1) 48%, rgba(206, 215, 200, 1) 57%, rgba(246, 236, 153, 1) 69%, rgba(232, 183, 105, 1) 78%);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.home-container {
+    margin: 0px auto 4px 0;
+    height: 1rem;
+    display: flex;
+    top: 0%;
+    left: 50%;
+    text-align: center;
+}
+
+.info {
+    justify-items: legacy;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex: 1;
+    margin-top: 10rem;
+}
+
+.info>h1 {
+    font-size: 2rem;
+    margin: -10.3rem 0 0px;
+    position: relative;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0;
+    letter-spacing: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(242, 238, 213);
+}
+
+.site-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .background {
     width: 430px;
     height: 415px;
