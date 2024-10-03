@@ -2,29 +2,21 @@ name: Build and Test
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
   pull_request:
-    branches:
-      - main
-  workflow_dispatch:
+    branches: [ "main" ]
+  workflow_dispatch: 
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Checkout the code
     - name: Checkout the code
       uses: actions/checkout@v4
-
-    # Step 2: Setup Node.js
-    - name: Install Node.js
+    - name: Install NodeJS
       uses: actions/setup-node@v4
       with:
-        node-version: '20'
-
-    # Step 3: Install dependencies
+        node-version: 20
     - name: Install dependencies
       run: npm install
-      working-directory: ./DevOps/03-Student-Registry  # Path to your package.json
