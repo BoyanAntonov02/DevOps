@@ -1,22 +1,31 @@
 name: Build and Test
 
+# Controls when the action will run
 on:
   push:
-    branches: [ "main" ]
+    branches: 
+      - main  # Run when there's a push to the main branch
   pull_request:
-    branches: [ "main" ]
-  workflow_dispatch: 
+    branches: 
+      - main  # Run when a pull request targets the main branch
+  workflow_dispatch:  # Allows manual triggering of the workflow
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # Using Ubuntu as the runner environment
 
     steps:
+    # Step 1: Checkout the code from the repository
     - name: Checkout the code
       uses: actions/checkout@v4
-    - name: Install NodeJS
+
+    # Step 2: Setup Node.js
+    - name: Install Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: 20
+        node-version: '20'  # Specify the version of Node.js
+
+    # Step 3: Install dependencies
     - name: Install dependencies
       run: npm install
+      working-directory: ./DevOps  # Adjust if your package.json is located in the 'DevOps' folder
