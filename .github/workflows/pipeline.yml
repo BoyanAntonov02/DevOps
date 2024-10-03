@@ -1,4 +1,4 @@
-name: Build and Test And Deploy
+name: Build and Test
 
 on:
   push:
@@ -8,17 +8,15 @@ on:
   workflow_dispatch: 
 
 jobs:
-
-  npm_security_tests:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout of the repo
+    - name: Checkout the code
       uses: actions/checkout@v4
-    - name: Use Node.js 20
+    - name: Install NodeJS
       uses: actions/setup-node@v4
       with:
-        node-version: 20.x
-        cache: 'npm'
+        node-version: 20
     - name: Install dependencies
       run: npm install
